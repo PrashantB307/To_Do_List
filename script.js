@@ -18,3 +18,19 @@ addForm.addEventListener("submit",(e) => {
         text.value="";
     }
 });
+ul.addEventListener("click",(e) => {
+    if(e.target.nodeName === 'I'){
+        e.target.parentElement.remove();
+    }
+});
+let searchList=(text) =>{
+    let listItems =ul.children;
+    for(let li of listItems){
+        if(li.innerText.toLowerCase().indexOf(text) == -1){
+            li.classList.add("filtered");
+        }else{
+            li.classList.remove("filtered");
+        }
+    }
+};
+
