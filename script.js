@@ -8,3 +8,13 @@ let addItem = (item) =>{
 </li>`;
 ul.innerHTML += str;
 };
+addForm.addEventListener("submit",(e) => {
+    e.preventDefault();
+    let item=text.value;
+    console.log(item);
+    
+    if(item.length > 0){
+        addItem(item);
+        text.value="";
+    }
+});
