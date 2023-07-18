@@ -34,3 +34,8 @@ let searchList=(text) =>{
     }
 };
 
+let searchText=document.querySelector(".search input");
+searchText.addEventListener("keyup",(e) => {
+    let text = searchText.value;
+    searchList(text.toLowerCase().trim());
+});
