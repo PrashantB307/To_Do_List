@@ -14,3 +14,14 @@ input[type=text]:focus {
     max-width: 400px;
 }
 
+.todos li {
+    background: #FF5959;
+}
+
+.delete {
+    cursor: pointer;
+}
+
+.filtered {
+    display: none !important;
+}
